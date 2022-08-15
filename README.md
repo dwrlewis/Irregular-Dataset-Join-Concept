@@ -2,23 +2,23 @@
 
 ## Table of Contents
 
-[1.0 - Preface](<a name="Preface">)
+[1.0 - Preface](#preface)
 
-[2.0 - Overview](<a name="2.0 - Overview">)
+[2.0 - Overview](#overview)
 
-[3.0 - Dictionary Selection](<a name="3.0 - Dictionary Selection">)
+[3.0 - Dictionary Selection](#dictionary-selection)
 
-[4.0 - Data Importing](<a name="4.0 - Data Importing">)
+[4.0 - Data Importing](#data-import)
 
-[5.0 - Data Join Options](<a name="5.0 - Data Join Options">)
+[5.0 - Data Join Options](#data-join)
 
-[6.0 - Join Notes](<a name="6.0 - Join Notes">)
+[6.0 - Join Notes](#join-notes)
 
-[7.0 - Data Export](<a name="7.0 - Data Export">)
+[7.0 - Data Export](#data-export)
 
 # 
 
-# <a name="Preface"></a>1.0 - Preface
+# <a name="preface"></a>1.0 - Preface
 
 Much of the original content of both this guide and the tool itself have
 been anonymised due to GDPR rules regarding the original test data it
@@ -29,7 +29,7 @@ Reference Codes, Area's, test values or comments present in the test
 data provided correlate to any of the original data this tool was
 intended for.
 
-# 2.0 - Overview
+# <a name="overview"></a>2.0 - Overview
 
 This tool is intended as an aid for the concatenation and joining of
 multiple .xlsx datasets to quickly flag up instances of missing join
@@ -85,7 +85,7 @@ the following interpreter settings:
   Six               1.16.0
   Wheel             0.36.2
 
-# 3.0 - Dictionary Selection
+#  <a name="dictionary-selection"></a>3.0 - Dictionary Selection
 
 To filter out irrelevant data and standardise column headers for
 concatenation, a dictionary/apply mapping file must first be generated.
@@ -114,7 +114,7 @@ from a .txt file, which uses standard python dictionary formatting.
 Below is an example of the default dictionary in both .xlsx and .txt
 formats.
 
-# 4.0 - Data Importing
+# <a name="data-import"></a>4.0 - Data Importing
 
 Data is categorised based on the dictionary remapping's. Each of the
 four main data types have a set of fields that are unique to only that
@@ -156,7 +156,7 @@ corruption. If the case of the latter, the file will be pasted to the
 other list box with its imported error mapped onto the end of the
 filename in the format "Filename.xlsx -- Error Description"
 
-# 5.0 - Data Join Options
+# <a name="data-join"></a>5.0 - Data Join Options
 
 There are several options for how data can be consolidated, including
 generating custom total fields, combining comment columns, and merging
@@ -258,7 +258,7 @@ the 'Timepoint (M)' fields may for example show that the primary data
 has its test month marked as 16, whilst a Secondary may have its data
 marked as 14.
 
-# 6.0 - Join Notes
+# <a name="join-notes"></a>6.0 - Join Notes
 
 After selections have been made and 'Join Data' has been pressed, an
 output of the data join findings will be printed to the main list box.
@@ -306,7 +306,7 @@ Codes, either due to human input error or multiple test timepoints.
 ![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image8.png){width="5.480314960629921in"
 height="5.118110236220472in"}
 
-# 7.0 - Data Export
+# <a name="data-export"></a>7.0 - Data Export
 
 When exporting the data, it is possible to select either a new file path
 or export the consolidated excel file directly to the original import

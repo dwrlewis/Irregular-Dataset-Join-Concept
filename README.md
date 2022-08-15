@@ -37,13 +37,13 @@ ID's, inconsistent values between files, and common formatting errors.
 The data extracts this was intended for can be categorised into four
 main types, as follows:
 
--   Primary Datasets -- First batch of test data
+-   Primary Datasets - First batch of test data
 
--   Secondary Datasets -- Second batch of test data
+-   Secondary Datasets - Second batch of test data
 
--   Tertiary Datasets -- Breakdowns of dialect data
+-   Tertiary Datasets - Breakdowns of dialect data
 
--   Supporting Datasets -- Contains miscellaneous data for things like
+-   Supporting Datasets - Contains miscellaneous data for things like
     post-testing commentary
 
 Datasets may not be cleanly split between these four categories, some
@@ -71,19 +71,19 @@ manual alignment.
 Generated in Python 3.8.0 using the Pycharm IDE with
 the following interpreter settings:
 
-  ***Package***     ***Version***
-  ----------------- ---------------
-  XlsxWriter        3.0.3
-  Et-xmlfile        1.1.0
-  Numpy             1.23.1
-  Openpyxl          3.0.10
-  Pandas            1.4.3
-  Pip               21.1.2
-  Python-dateutil   2.8.2
-  Pytz              2022.2.1
-  Setuptools        57.0.0
-  Six               1.16.0
-  Wheel             0.36.2
+  |***Package***     |***Version***  |
+  |----------------- |---------------|
+  |XlsxWriter        |3.0.3          |
+  |Et-xmlfile        |1.1.0          |
+  |Numpy             |1.23.1         |
+  |Openpyxl          |3.0.10         |
+  |Pandas            |1.4.3          |
+  |Pip               |21.1.2         |
+  |Python-dateutil   |2.8.2          |
+  |Pytz              |2022.2.1       |
+  |Setuptools        |57.0.0         |
+  |Six               |1.16.0         |
+  |Wheel             |0.36.2         |
 
 #  <a name="dictionary-selection"></a>3.0 - Dictionary Selection
 
@@ -91,9 +91,7 @@ To filter out irrelevant data and standardise column headers for
 concatenation, a dictionary/apply mapping file must first be generated.
 There are three main formats that can be used for this process.
 
-![Text Description automatically
-generated](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image1.png){width="5.515748031496063in"
-height="5.118110236220472in"}
+![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image1.png)
 
 ## 
 
@@ -124,9 +122,7 @@ would automatically map a file as primary data, whilst the presence of a
 instances where both these fields are present, the former would take
 priority due to order of primacy going from Primary \> Supporting.
 
-![Graphical user interface, text Description automatically
-generated](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image4.png){width="5.511811023622047in"
-height="5.118110236220472in"}
+![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image4.png)
 
 ## 
 
@@ -167,8 +163,7 @@ If there are excessive numbers of columns in datasets marked as primary
 or tertiary, then these will be flagged up in yellow, and a warning will
 appear in the output box.
 
-![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image5.png){width="5.515748031496063in"
-height="5.118110236220472in"}
+![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image5.png)
 
 ## 5.1 - Generating Primary Totals
 
@@ -273,8 +268,7 @@ fields generated, as well as note whether the original fields have been
 dropped. If no corresponding fields were found this will also be
 highlighted.
 
-![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image6.png){width="5.515748031496063in"
-height="5.118110236220472in"}
+![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image6.png)
 
 ## 
 
@@ -287,8 +281,7 @@ will flag up instances where new lines are added as a result of join
 ID's that were not present in the primary data, but are in the
 Secondary, Tertiary, or Supporting data.
 
-![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image7.png){width="5.5in"
-height="5.118110236220472in"}
+![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image7.png)
 
 []{#_Toc111398055 .anchor}
 
@@ -303,8 +296,7 @@ This section also includes the total number of lines & columns in the
 final data, as well as instances where there are multiple Reference
 Codes, either due to human input error or multiple test timepoints.
 
-![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image8.png){width="5.480314960629921in"
-height="5.118110236220472in"}
+![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image8.png)
 
 # <a name="data-export"></a>7.0 - Data Export
 
@@ -313,8 +305,7 @@ or export the consolidated excel file directly to the original import
 folder. The exported file is always saved as 'Site Data Joined.xlsx' and
 will overwrite any file with this name in the output folder.
 
-![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image9.png){width="5.5in"
-height="5.118110236220472in"}
+![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image9.png)
 
 []{#_Toc111398058 .anchor}
 
@@ -338,5 +329,6 @@ to the end
 
 This enables for easier isolation of anomalies in the data recording
 methodology across test areas and how to account for
-this.![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image10.png){width="5.905511811023622in"
-height="2.7401574803149606in"}
+this.
+
+![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image10.png)

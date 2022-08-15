@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-### [Preface:](#preface)
+### [Preface:](#preface:)
 
 ##### [Interpreter Settings](#interpreter-settings)
 

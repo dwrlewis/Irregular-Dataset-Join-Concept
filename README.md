@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-[1.0 - Preface](<a name="1.0   Preface">)
+[1.0 - Preface](<a name="Preface">)
 
 [2.0 - Overview](<a name="2.0 - Overview">)
 
@@ -18,7 +18,7 @@
 
 # 
 
-# 1.0 - Preface
+# <a name="Preface"></a>1.0 - Preface
 
 Much of the original content of both this guide and the tool itself have
 been anonymised due to GDPR rules regarding the original test data it

@@ -2,49 +2,23 @@
 
 ## Table of Contents
 
-[Preface:](#preface)
+[1.0 - Preface](<a name="1.0 - Preface">)
 
-[Interpreter Settings](#interpreter-settings)
+[2.0 - Overview](<a name="2.0 - Overview">)
 
-[Overview](#overview)
+[3.0 - Dictionary Selection](<a name="3.0 - Dictionary Selection">)
 
-[Dictionary Selection:](#dictionary-selection)
+[4.0 - Data Importing](<a name="4.0 - Data Importing">)
 
-[Default Dictionary](#default-dictionary)
+[5.0 - Data Join Options](<a name="5.0 - Data Join Options">)
 
-[.xlsx & .txt Dictionary Import](#xlsx-.txt-dictionary-import)
+[6.0 - Join Notes](<a name="6.0 - Join Notes">)
 
-[Data Importing:](#data-importing)
-
-[Data Types](#data-types)
-
-[Other Data](#other-data)
-
-[Data Join Options:](#data-join-options)
-
-[Generating Primary Totals](#generating-primary-totals)
-
-[Generating Tertiary Totals](#generating-tertiary-totals)
-
-[Dropping Sub-Totals](#dropping-sub-totals)
-
-[Consolidating Fields](#section-5)
-
-[Join Notes](#join-notes)
-
-[Total Field Generation](#section-6)
-
-[Dataset Joins](#section-7)
-
-[Field Consolidation](#_Toc111398055)
-
-[Data Export](#data-export)
-
-[Export Format](#_Toc111398058)
+[7.0 - Data Export](<a name="7.0 - Data Export">)
 
 # 
 
-# Preface
+# 1.0 - Preface
 
 Much of the original content of both this guide and the tool itself have
 been anonymised due to GDPR rules regarding the original test data it
@@ -55,26 +29,7 @@ Reference Codes, Area's, test values or comments present in the test
 data provided correlate to any of the original data this tool was
 intended for.
 
-## Interpreter Settings
-
-This program was generated in Python 3.8.0 using the Pycharm IDE with
-the following interpreter settings:
-
-  ***Package***     ***Version***
-  ----------------- ---------------
-  XlsxWriter        3.0.3
-  Et-xmlfile        1.1.0
-  Numpy             1.23.1
-  Openpyxl          3.0.10
-  Pandas            1.4.3
-  Pip               21.1.2
-  Python-dateutil   2.8.2
-  Pytz              2022.2.1
-  Setuptools        57.0.0
-  Six               1.16.0
-  Wheel             0.36.2
-
-## Overview
+# 2.0 - Overview
 
 This tool is intended as an aid for the concatenation and joining of
 multiple .xlsx datasets to quickly flag up instances of missing join
@@ -111,7 +66,26 @@ comments in single cells with value breakdowns, perfect joining is not
 feasible, but it is designed to partially align these fields for ease of
 manual alignment.
 
-# Dictionary Selection
+## 2.1 - Interpreter Settings
+
+Generated in Python 3.8.0 using the Pycharm IDE with
+the following interpreter settings:
+
+  ***Package***     ***Version***
+  ----------------- ---------------
+  XlsxWriter        3.0.3
+  Et-xmlfile        1.1.0
+  Numpy             1.23.1
+  Openpyxl          3.0.10
+  Pandas            1.4.3
+  Pip               21.1.2
+  Python-dateutil   2.8.2
+  Pytz              2022.2.1
+  Setuptools        57.0.0
+  Six               1.16.0
+  Wheel             0.36.2
+
+# 3.0 - Dictionary Selection
 
 To filter out irrelevant data and standardise column headers for
 concatenation, a dictionary/apply mapping file must first be generated.
@@ -123,7 +97,7 @@ height="5.118110236220472in"}
 
 ## 
 
-## Default Dictionary
+## 3.1 - Default Dictionary
 
 The default dictionary is included within the tool itself. It contains
 relevant mappings for the randomised site data's key fields, including
@@ -132,7 +106,7 @@ using the checkbox at the top left of the user interface.
 
 ## 
 
-## .xlsx & .txt Dictionary Import
+## 3.2 - .xlsx & .txt Dictionary Import
 
 Mappings can be imported using an .xlsx template with a list of columns
 and their corresponding mappings. It is also possible to import mappings
@@ -140,7 +114,7 @@ from a .txt file, which uses standard python dictionary formatting.
 Below is an example of the default dictionary in both .xlsx and .txt
 formats.
 
-# Data Importing
+# 4.0 - Data Importing
 
 Data is categorised based on the dictionary remapping's. Each of the
 four main data types have a set of fields that are unique to only that
@@ -156,7 +130,7 @@ height="5.118110236220472in"}
 
 ## 
 
-## Data Types
+## 4.1 - Data Types
 
 At least one primary set of data is mandatory, if no files contain
 primary data fields, the import will be cancelled. However, all other
@@ -173,7 +147,7 @@ reload times.
 
 ## 
 
-## Other Data
+## 4.2 - Other Data
 
 Data that is categorised in the other column experienced errors during
 the import. This is generally a result of no viable mappings being
@@ -182,7 +156,7 @@ corruption. If the case of the latter, the file will be pasted to the
 other list box with its imported error mapped onto the end of the
 filename in the format "Filename.xlsx -- Error Description"
 
-# Data Join Options
+# 5.0 - Data Join Options
 
 There are several options for how data can be consolidated, including
 generating custom total fields, combining comment columns, and merging
@@ -196,7 +170,7 @@ appear in the output box.
 ![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image5.png){width="5.515748031496063in"
 height="5.118110236220472in"}
 
-## Generating Primary Totals
+## 5.1 - Generating Primary Totals
 
 If the primary dataset is marked as having a large number of columns
 (\>100), this is generally because the data contains individual test
@@ -212,7 +186,7 @@ This is generally a straightforward combination due to the source data
 being a system export without human input, so requires minimal if any
 correction other than checking for completeness.
 
-## Generating Tertiary Totals
+## 5.2 - Generating Tertiary Totals
 
 Tertiary data recording methods are generally far more inconsistent
 across test areas, so will generate a large volume of columns when
@@ -245,7 +219,7 @@ the data present and dictionary mappings used:
     other language total scores are above or belove accepted margins for
     language fluency.
 
-## Dropping Sub-Totals
+## 5.3 - Dropping Sub-Totals
 
 There is also the option to drop all original fields that the new totals
 have been generated from. This is generally recommended for Primary data
@@ -266,7 +240,7 @@ extract is performed that drops the original fields.
 
 ## 
 
-## Consolidating Fields
+## 5.4 - Consolidating Fields
 
 It is also common for datasets to contain the same columns across
 primary, secondary, tertiary, and supporting data. For example, the
@@ -284,7 +258,7 @@ the 'Timepoint (M)' fields may for example show that the primary data
 has its test month marked as 16, whilst a Secondary may have its data
 marked as 14.
 
-# Join Notes
+# 6.0 - Join Notes
 
 After selections have been made and 'Join Data' has been pressed, an
 output of the data join findings will be printed to the main list box.
@@ -292,7 +266,7 @@ This is split into three main sections:
 
 ## 
 
-## Total Field Generation
+## 6.1 - Total Field Generation
 
 This section will show the number of subtotal fields found, the new
 fields generated, as well as note whether the original fields have been
@@ -304,7 +278,7 @@ height="5.118110236220472in"}
 
 ## 
 
-## Dataset Joins
+## 6.2 - Dataset Joins
 
 This section will display the results of the data joins. Given that this
 tool is primarily intended for flagging data inconsistencies & errors,
@@ -318,7 +292,7 @@ height="5.118110236220472in"}
 
 []{#_Toc111398055 .anchor}
 
-## Field Consolidation
+## 6.3 - Field Consolidation
 
 Outputs a list of how many fields of a particular type were found across
 multiple datasets. For example, if the 'Area' column was found across
@@ -332,7 +306,7 @@ Codes, either due to human input error or multiple test timepoints.
 ![](vertopal_f6b5fd26a71243b6ad864fe2b63e577d/media/image8.png){width="5.480314960629921in"
 height="5.118110236220472in"}
 
-# Data Export
+# 7.0 - Data Export
 
 When exporting the data, it is possible to select either a new file path
 or export the consolidated excel file directly to the original import
@@ -344,7 +318,7 @@ height="5.118110236220472in"}
 
 []{#_Toc111398058 .anchor}
 
-## Export Format
+## 7.1 - Export Format
 
 The exported 'Site Data Joined.xlsx' file is designed to flag up
 instances of inconsistencies across datasets through the following:

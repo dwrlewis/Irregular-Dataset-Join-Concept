@@ -2,45 +2,45 @@
 
 ## Table of Contents
 
-### [Preface:](#preface)
+[Preface:](#preface)
 
-##### [Interpreter Settings](#interpreter-settings)
+[Interpreter Settings](#interpreter-settings)
 
-##### [Overview](#overview)
+[Overview](#overview)
 
-### [Dictionary Selection:](#dictionary-selection)
+[Dictionary Selection:](#dictionary-selection)
 
-##### [Default Dictionary](#default-dictionary)
+[Default Dictionary](#default-dictionary)
 
-##### [.xlsx & .txt Dictionary Import](#xlsx-.txt-dictionary-import)
+[.xlsx & .txt Dictionary Import](#xlsx-.txt-dictionary-import)
 
-### [Data Importing:](#data-importing)
+[Data Importing:](#data-importing)
 
-##### [Data Types](#data-types)
+[Data Types](#data-types)
 
-##### [Other Data](#other-data)
+[Other Data](#other-data)
 
-### [Data Join Options:](#data-join-options)
+[Data Join Options:](#data-join-options)
 
-##### [Generating Primary Totals](#generating-primary-totals)
+[Generating Primary Totals](#generating-primary-totals)
 
-##### [Generating Tertiary Totals](#generating-tertiary-totals)
+[Generating Tertiary Totals](#generating-tertiary-totals)
 
-##### [Dropping Sub-Totals](#dropping-sub-totals)
+[Dropping Sub-Totals](#dropping-sub-totals)
 
-##### [Consolidating Fields](#section-5)
+[Consolidating Fields](#section-5)
 
-### [Join Notes](#join-notes)
+[Join Notes](#join-notes)
 
-##### [Total Field Generation](#section-6)
+[Total Field Generation](#section-6)
 
-##### [Dataset Joins](#section-7)
+[Dataset Joins](#section-7)
 
-##### [Field Consolidation](#_Toc111398055)
+[Field Consolidation](#_Toc111398055)
 
-#### [Data Export](#data-export)
+[Data Export](#data-export)
 
-##### [Export Format](#_Toc111398058)
+[Export Format](#_Toc111398058)
 
 # 
 

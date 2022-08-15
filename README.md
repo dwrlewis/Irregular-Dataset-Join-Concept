@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-[1.0 - Preface](<a name="1.0 - Preface">)
+[1.0 - Preface](<a name="1.0   Preface">)
 
 [2.0 - Overview](<a name="2.0 - Overview">)
 

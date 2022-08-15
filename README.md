@@ -1,46 +1,46 @@
-# ***Dataset Concatenation & Join Tool ReadMe*** {#dataset-concatenation-join-tool-readme .TOC-Heading}
+# ***Dataset Concatenation & Join Tool ReadMe***
 
-# Table of Contents {#table-of-contents .TOC-Heading}
+## Table of Contents
 
-[Preface: 2](#preface)
+### [Preface:](#preface)
 
-[Interpreter Settings: 2](#interpreter-settings)
+##### [Interpreter Settings](#interpreter-settings)
 
-[Overview: 2](#overview)
+##### [Overview](#overview)
 
-[Dictionary Selection: 4](#dictionary-selection)
+### [Dictionary Selection:](#dictionary-selection)
 
-[Default Dictionary: 4](#default-dictionary)
+##### [Default Dictionary](#default-dictionary)
 
-[.xlsx & .txt Dictionary Import: 4](#xlsx-.txt-dictionary-import)
+##### [.xlsx & .txt Dictionary Import](#xlsx-.txt-dictionary-import)
 
-[Data Importing: 5](#data-importing)
+### [Data Importing:](#data-importing)
 
-[Data Types: 5](#data-types)
+##### [Data Types](#data-types)
 
-[Other Data: 5](#other-data)
+##### [Other Data](#other-data)
 
-[Data Join Options: 6](#data-join-options)
+### [Data Join Options:](#data-join-options)
 
-[Generating Primary Totals: 6](#generating-primary-totals)
+##### [Generating Primary Totals](#generating-primary-totals)
 
-[Generating Tertiary Totals: 6](#generating-tertiary-totals)
+##### [Generating Tertiary Totals](#generating-tertiary-totals)
 
-[Dropping Sub-Totals: 7](#dropping-sub-totals)
+##### [Dropping Sub-Totals](#dropping-sub-totals)
 
-[Consolidating Fields: 7](#section-5)
+##### [Consolidating Fields](#section-5)
 
-[Join Notes: 8](#join-notes)
+### [Join Notes](#join-notes)
 
-[Total Field Generation: 8](#section-6)
+##### [Total Field Generation](#section-6)
 
-[Dataset Joins: 8](#section-7)
+##### [Dataset Joins](#section-7)
 
-[Field Consolidation: 9](#_Toc111398055)
+##### [Field Consolidation](#_Toc111398055)
 
-[Data Export: 11](#data-export)
+#### [Data Export](#data-export)
 
-[Export Format: 11](#_Toc111398058)
+##### [Export Format](#_Toc111398058)
 
 # 
 

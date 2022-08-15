@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-### [Preface:](#preface:)
+### [Preface:](#preface)
 
 ##### [Interpreter Settings](#interpreter-settings)
 
@@ -44,7 +44,7 @@
 
 # 
 
-# Preface:
+# Preface
 
 Much of the original content of both this guide and the tool itself have
 been anonymised due to GDPR rules regarding the original test data it
@@ -55,7 +55,7 @@ Reference Codes, Area's, test values or comments present in the test
 data provided correlate to any of the original data this tool was
 intended for.
 
-## Interpreter Settings:
+## Interpreter Settings
 
 This program was generated in Python 3.8.0 using the Pycharm IDE with
 the following interpreter settings:

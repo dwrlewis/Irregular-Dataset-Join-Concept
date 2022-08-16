@@ -22,7 +22,7 @@
 
 Due to GDPR rules regarding the test data this program was designed for, much of its original content has been heavily adjusted or removed outright. What follows is a stripped-down concept version, eliminating large sections of the transformation and standardisation process relating to personal information. 
 
-The dummy data found here is representational of the original dataset formats, but has been entirely generated from scratch. All reference codes, test areas, values and comments are entirely randomised and have no basis in actual test data.
+The dummy data [found here](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data) is representational of the original dataset formats, but has been entirely generated from scratch. All reference codes, test areas, values and comments are entirely randomised and have no basis in actual test data.
 
 # <a name="overview"></a>2.0 - Overview
 
@@ -70,9 +70,7 @@ the following interpreter settings:
 
 #  <a name="dictionary-selection"></a>3.0 - Dictionary Selection
 
-To filter out irrelevant data and standardise column headers for
-concatenation, a dictionary/apply mapping file must first be generated.
-There are three main formats that can be used for this process.
+When a batch of data would be received, it would first need to have a mapping document created. This would be used to isolate which fields were relevant, and what they should be standardised as for concatenation with other datasets. There were three methods created to generate a mapping file, listed below.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image1.png)
 
@@ -80,19 +78,16 @@ There are three main formats that can be used for this process.
 
 ## 3.1 - Default Dictionary
 
-The default dictionary is included within the tool itself. It contains
-relevant mappings for the randomised site data's key fields, including
-reference ID's, timepoints, area of testing etc, and can be selected
-using the checkbox at the top left of the user interface.
+The default dictionary is included within the tool itself. It would be periodically updated with mappings as new site data was provided for testing. In this version of the program, it has been populated with essential mappings for all of the randomised batch data saved here.
 
 ## 
 
 ## 3.2 - .xlsx & .txt Dictionary Import
 
-Mappings can be imported using an .xlsx template with a list of columns
+Mappings could also be imported using an .xlsx template with a list of columns
 and their corresponding mappings. It is also possible to import mappings
 from a .txt file, which uses standard python dictionary formatting.
-Below is an example of the default dictionary in both .xlsx and .txt
+[Linked here](https://github.com/dwrlewis/Site-Converter/tree/master/Default%20Dictionaries) are examples of the default dictionary in both .xlsx and .txt
 formats.
 
 # <a name="data-import"></a>4.0 - Data Importing

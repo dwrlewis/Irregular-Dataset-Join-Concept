@@ -78,13 +78,13 @@ When a batch of data would be received, it would first need to have a mapping do
 
 ## 3.1 - Default Dictionary
 
-The default dictionary is included within the tool itself. It would be periodically updated with mappings as new site data was provided for testing. In this version of the program, it has been populated with essential mappings for all of the randomised batch data saved here.
+The default dictionary is included within the tool itself. It would be periodically updated with mappings as new site data was provided for testing, and was the generalised dictionary used for most conversion. In this version of the program, it has been populated with essential mappings for all of the randomised batch data [found here](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data).
 
 ## 
 
 ## 3.2 - .xlsx & .txt Dictionary Import
 
-Mappings could also be imported using an .xlsx template with a list of columns
+Mappings can also be imported using an .xlsx file with a list of columns
 and their corresponding mappings. It is also possible to import mappings
 from a .txt file, which uses standard python dictionary formatting.
 [Linked here](https://github.com/dwrlewis/Site-Converter/tree/master/Default%20Dictionaries) are examples of the default dictionary in both .xlsx and .txt
@@ -94,10 +94,10 @@ formats.
 
 Data is categorised based on the dictionary remapping's. Each of the
 four main data types have a set of fields that are unique to only that
-type. For example, the presence of a column remapped as \'Resp. Score\'
+type. For example, the presence of a column that has been remapped as \'Resp. Score\'
 would automatically map a file as primary data, whilst the presence of a
-'Voc. Group' column would mark the file as a tertiary dataset. In
-instances where both these fields are present, the former would take
+'Voc. Group' column would mark the file as tertiary. In
+instances where both these fields are present, the former will take
 priority due to order of primacy going from Primary \> Supporting.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image4.png)
@@ -106,29 +106,28 @@ priority due to order of primacy going from Primary \> Supporting.
 
 ## 4.1 - Data Types
 
-At least one primary set of data is mandatory, if no files contain
+At least one primary set of data is mandatory. If no files contain
 primary data fields, the import will be cancelled. However, all other
 datasets are optional providing there is at least one set of additional
-data to join. For example, it is possible to join just secondary data
+data to join to the primary. For example, it is possible to join just secondary data
 without any available tertiary or supporting.
 
 If no viable fields are found in a file, it is reloaded with the next
 row set as the column header. This is repeated 5 times to check if a
 viable header line is present, after which the file is marked as
-non-standard. The datasets being tested do not exceeds several hundred
-lines in most instances, so this does not have a significant impact on
-reload times.
+non-standard. The original datasets being tested did not exceeds several hundred
+lines, so the impact this has on load times was not a significant consideration.
 
 ## 
 
 ## 4.2 - Other Data
 
-Data that is categorised in the other column experienced errors during
+Data that is categorised in the \'other\' column experienced errors during
 the import. This is generally a result of no viable mappings being
 present in the file but can also be caused by import errors such as file
-corruption. If the case of the latter, the file will be pasted to the
-other list box with its imported error mapped onto the end of the
-filename in the format "Filename.xlsx -- Error Description"
+corruption. In the case of the latter, the file will be pasted to the
+other list box with its import error mapped onto the end of the
+filename in the format \'Filename.xlsx -- Error Description\'.
 
 # <a name="data-join"></a>5.0 - Data Join Options
 
@@ -146,25 +145,24 @@ appear in the output box.
 ## 5.1 - Generating Primary Totals
 
 If the primary dataset is marked as having a large number of columns
-(\>100), this is generally because the data contains individual test
+(\>100), this is likely because the data contains individual test
 values, rather than any categorical sub-totals or total fields. In these
-instances, selecting "Primary Sub-Totals" will generate two new fields
+instances, selecting \'Primary Sub-Totals\' will generate two new fields
 from these values:
 
 -   \'Resp. Score AT \' -- A raw total of all test values
 
 -   \'Art. Score AT \' -- A total of all test values greater than 1
 
-This is generally a straightforward combination due to the source data
-being a system export without human input, so requires minimal if any
-correction other than checking for completeness.
+This is a straightforward combination due to the source data of this test area
+being a system export, so requires minimal if any correction other than checking for completeness.
 
 ## 5.2 - Generating Tertiary Totals
 
 Tertiary data recording methods are generally far more inconsistent
 across test areas, so will generate a large volume of columns when
 multiple tertiary datasets from different areas are loaded. Selecting
-"Tertiary Sub-Totals" will generate up to five new fields depending on
+\'Tertiary Sub-Totals\' will generate up to five new fields depending on
 the data present and dictionary mappings used:
 
 -   \'Merged M/O Notes\' -- Consolidates all main language (M-L) & other
@@ -181,32 +179,27 @@ the data present and dictionary mappings used:
     field and original sub-totals.
 
 -   \'O-L Test AT (tot.)\' -- Same as above, but searches for all other
-    language totals and combines them to generate a single other
-    language total field of all additional language scores.
+    language totals and combines them to generate a single consolidated other
+    language total field.
 
--   \'O-L Test AT (subs)\' -- Same as above but creates a single total
-    field from the subtotals of all other language columns.
+-   \'O-L Test AT (subs)\' -- Same as above but creates the consolidated other language total
+    field from subtotals of each individual language.
 
 -   \'Voc. Group AT (subs)' & \'Voc. Group AT (tot.)\' -- Generates a
-    binary 0/1 field from the \'O-L Test AT' fields to calculate if
+    binary 0/1 field from the \'O-L Test AT' fields to calculate if its corresponding
     other language total scores are above or belove accepted margins for
     language fluency.
 
 ## 5.3 - Dropping Sub-Totals
 
-There is also the option to drop all original fields that the new totals
-have been generated from. This is generally recommended for Primary data
-totalling, where subtotal columns can number in the hundreds, and their
-consolidation can greatly aid in data readability. This is generally
-also advised as this data is significantly less prone to inconsistent
-integer/string entries due to the nature of the data recording method
-used in the original test data.
+There is also the option to drop all original fields that the new customed fields
+have been generated from. For primary data, this removes the hundreds of subtotal columns in place of a single custom total.
 
-For Tertiary data it is recommended to review the auto-total fields
-against the original data manually due to the degree of inconsistency.
+For Tertiary data it is recommended to first perfom an export without this filter, so that the auto-total fields can be reviewed
+against the original data due to the degree of inconsistency.
 Whilst the purging of string characters generally allows for conversion
 of most data types to Integers/Floats, some value fields may contain
-entries like "100% Eng, 50% Fr, 10% Ger", which would generate
+entries like "100% Eng, 50% Fr, 10% Ger" rather than subtotals split along columns, which would generate
 abnormally large auto total amounts. Reference to the original field
 data and consolidated comment fields should be made before another
 extract is performed that drops the original fields.
@@ -229,7 +222,7 @@ Sub-Totals option, it is recommended that data first be output without
 this option selected to check for consistency across datasets. Reviewing
 the 'Timepoint (M)' fields may for example show that the primary data
 has its test month marked as 16, whilst a Secondary may have its data
-marked as 14.
+marked as 15.
 
 # <a name="join-notes"></a>6.0 - Join Notes
 

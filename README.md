@@ -115,7 +115,7 @@ without any available tertiary or supporting.
 If no viable fields are found in a file, it is reloaded with the next
 row set as the column header. This is repeated 5 times to check if a
 viable header line is present, after which the file is marked as
-non-standard. The original datasets being tested did not exceeds several hundred
+non-standard. The original datasets being tested did not exceed several hundred
 lines, so the impact this has on load times was not a significant consideration.
 
 ## 

@@ -274,19 +274,17 @@ Codes, either due to human input error or multiple test timepoints.
 When exporting the data, it is possible to select either a new file path
 or export the consolidated excel file directly to the original import
 folder. The exported file is always saved as 'Site Data Joined.xlsx' and
-will overwrite any file with this name in the output folder.
+will overwrite any file with this name in the output folder, unless the file is open, which will cause an error flag.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image9.png)
 
-[]{#_Toc111398058 .anchor}
 
 ## 7.1 - Export Format
 
 The exported 'Site Data Joined.xlsx' file is designed to flag up
-instances of inconsistencies across datasets through the following:
+inconsistencies across datasets through the following:
 
-Column ordering by category, additional non-standard columns are moved
-to the end
+-   Column ordering by category, additional non-standard columns are moved to the end
 
 -   Instances of duplicate ID's are highlighted in dark red
 
@@ -296,10 +294,8 @@ to the end
     generated fields
 
 -   Colour scaling for primary, secondary, and tertiary data values
-    relative to expected amounts
+    relative to expected amounts. Non-numeric values are left wihout highlights
 
-This enables for easier isolation of anomalies in the data recording
-methodology across test areas and how to account for
-this.
+This enables for easier isolation of anomalies in the data recording methodology across test areas and how to account for this.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image10.png)

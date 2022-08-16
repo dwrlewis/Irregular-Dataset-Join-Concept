@@ -45,7 +45,7 @@ Datasets could contain a mixture of the types noted above. For example an extrac
     from a source system. As such, many transformation and standardisation errors would be a result of
     inconsistent input, e.g., mixing strings, integers, and floats.
 
-Given the short timescale of the project and high degree of inconsistency between datasets, perfect joining of data was not considered to be viable. The combined output of this program was intended to provide an immediate visual flag of major inconsistencies across primary -- supporting data for individual sites, as well as between the different recording methods used across test areas, enabling more reliable manual corrections.
+Given the short timescale of the project and high degree of inconsistency between datasets, perfect joining of data was not considered to be viable. The combined output of this program was intended to provide an immediate visual flag of major inconsistencies across data for individual sites, as well as the different recording methods used between sites, enabling more reliable manual corrections.
 
 
 

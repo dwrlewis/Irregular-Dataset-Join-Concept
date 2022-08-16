@@ -70,7 +70,7 @@ the following interpreter settings:
 
 #  <a name="dictionary-selection"></a>3.0 - Dictionary Selection
 
-When a batch of data would be received, it would first need to have a mapping document created. This is used to isolate which fields are relevant, and what they should be standardised as for concatenation with other datasets. For example, \'Region\', \'Zone\', or \'Site ID\', would all be standardised as \'Area\'.There were three methods created to generate a mapping file, listed below.
+When a batch of data would be received, it would first need to have a mapping document created. This is used to isolate which fields are relevant, and what they should be standardised as for concatenation with other datasets. For example, \'Region\', \'Zone\', or \'Site ID\', would all be standardised as \'Area\'. There were three methods created to generate a mapping file, listed below.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image1.png)
 

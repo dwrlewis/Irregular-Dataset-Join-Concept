@@ -254,7 +254,6 @@ Secondary, Tertiary, or Supporting data.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image7.png)
 
-[]{#_Toc111398055 .anchor}
 
 ## 6.3 - Field Consolidation
 

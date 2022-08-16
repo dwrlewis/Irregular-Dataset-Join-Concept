@@ -20,51 +20,34 @@
 
 # <a name="preface"></a>1.0 - Preface
 
-Much of the original content of both this guide and the tool itself have
-been anonymised due to GDPR rules regarding the original test data it
-was designed for. What follows is a stripped-down version of the
-original, eliminating entire sections involving personal info, and using
-test data that has been manually generated and entirely randomised. No
-Reference Codes, Area's, test values or comments present in the test
-data provided correlate to any of the original data this tool was
-intended for.
+Due to GDPR rules regarding the test data this program was designed for, much of its original content has been heavily adjusted or removed outright. What follows is a stripped-down concept version, eliminating large sections of the transformation and standardisation process relating to personal information. 
+
+The dummy data [found here](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data) is representational of the original dataset formats, but has been entirely generated from scratch. All reference codes, test areas, values and comments are entirely randomised and have no basis in actual test data.
 
 # <a name="overview"></a>2.0 - Overview
 
-This tool is intended as an aid for the concatenation and joining of
-multiple .xlsx datasets to quickly flag up instances of missing join
-ID's, inconsistent values between files, and common formatting errors.
-The data extracts this was intended for can be categorised into four
-main types, as follows:
+This program was originally designed as an aid for the concatenation and joining of multiple .xlsx test datasets to quickly flag up instances of missing join fields, inconsistent recording methods, and common formatting errors. The original datasets could broadly fit under four main categories:
 
--   Primary Datasets - First batch of test data
+-   Primary Datasets - First batch of test data, primarily numeric with basic participant details
 
--   Secondary Datasets - Second batch of test data
+-   Secondary Datasets - Second batch of test data, primarily numeric with basic participant details
 
--   Tertiary Datasets - Breakdowns of dialect data
+-   Tertiary Datasets - Breakdowns of dialect data, generally very inconsistent across datasets, containing the majority of the participant info with a mixture of integers and strings, sometimes in the same data column
 
--   Supporting Datasets - Contains miscellaneous data for things like
-    post-testing commentary
+-   Supporting Datasets - Contains miscellaneous data for things like post-testing commentary
 
-Datasets may not be cleanly split between these four categories, some
-.xlsx files may for example contain both their primary and tertiary data
-in one or be missing certain columns from either. The reason for this
-level of inconsistency is twofold:
+Datasets could contain a mixture of the types noted above. For example an extract could contain both the primary and tertiary data, or be missing certain columns from either. The reason for this level of inconsistency was twofold:
 
-1.  The source data comes from a multitude of test sites across various
-    countries, so data recording methods can vary significantly
+1.  The source data came from a multitude of test sites across various
+    countries, so data recording methods were not fully standardised.
 
-2.  Most data has been entered manually into .xlsx files, not extracted
-    from a source system. As such, many errors are a result of
+2.  A large portion of the data was entered manually into .xlsx files, not extracted
+    from a source system. As such, many transformation and standardisation errors would be a result of
     inconsistent input, e.g., mixing strings, integers, and floats.
 
-The output of this program is intended to flag up inconsistencies across
-both primary -- supporting data for individual sites, as well as between
-different sites recording methods. Given that some measurements may be
-recorded as multiple subtotal fields, single total fields, and string
-comments in single cells with value breakdowns, perfect joining is not
-feasible, but it is designed to partially align these fields for ease of
-manual alignment.
+Given the short timescale of the project and high degree of inconsistency between datasets, perfect joining of data was not considered to be viable. The combined output of this program was intended to provide an immediate visual flag of major inconsistencies across data for individual sites, as well as the different recording methods used between sites, enabling more reliable manual corrections.
+
+
 
 ## 2.1 - Interpreter Settings
 
@@ -87,9 +70,7 @@ the following interpreter settings:
 
 #  <a name="dictionary-selection"></a>3.0 - Dictionary Selection
 
-To filter out irrelevant data and standardise column headers for
-concatenation, a dictionary/apply mapping file must first be generated.
-There are three main formats that can be used for this process.
+When a batch of data would be received, it would first need to have a mapping document created. This is used to isolate which fields are relevant, and what they should be standardised as for concatenation with other datasets. For example, \'Region\', \'Zone\', or \'Site ID\', would all be standardised as \'Area\'.There were three methods created to generate a mapping file, listed below.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image1.png)
 
@@ -97,29 +78,26 @@ There are three main formats that can be used for this process.
 
 ## 3.1 - Default Dictionary
 
-The default dictionary is included within the tool itself. It contains
-relevant mappings for the randomised site data's key fields, including
-reference ID's, timepoints, area of testing etc, and can be selected
-using the checkbox at the top left of the user interface.
+The default dictionary is included within the tool itself. It would be periodically updated with mappings as new site data was provided for testing, and was the generalised dictionary used for most conversion. In this version of the program, it has been populated with essential mappings for all of the randomised batch data [found here](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data).
 
 ## 
 
 ## 3.2 - .xlsx & .txt Dictionary Import
 
-Mappings can be imported using an .xlsx template with a list of columns
+Mappings can also be imported using an .xlsx file with a list of columns
 and their corresponding mappings. It is also possible to import mappings
 from a .txt file, which uses standard python dictionary formatting.
-Below is an example of the default dictionary in both .xlsx and .txt
+[Linked here](https://github.com/dwrlewis/Site-Converter/tree/master/Default%20Dictionaries) are examples of the default dictionary in both .xlsx and .txt
 formats.
 
 # <a name="data-import"></a>4.0 - Data Importing
 
 Data is categorised based on the dictionary remapping's. Each of the
 four main data types have a set of fields that are unique to only that
-type. For example, the presence of a column remapped as \'Resp. Score\'
+type. For example, the presence of a column that has been remapped as \'Resp. Score\'
 would automatically map a file as primary data, whilst the presence of a
-'Voc. Group' column would mark the file as a tertiary dataset. In
-instances where both these fields are present, the former would take
+'Voc. Group' column would mark the file as tertiary. In
+instances where both these fields are present, the former will take
 priority due to order of primacy going from Primary \> Supporting.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image4.png)
@@ -128,29 +106,28 @@ priority due to order of primacy going from Primary \> Supporting.
 
 ## 4.1 - Data Types
 
-At least one primary set of data is mandatory, if no files contain
+At least one primary set of data is mandatory. If no files contain
 primary data fields, the import will be cancelled. However, all other
 datasets are optional providing there is at least one set of additional
-data to join. For example, it is possible to join just secondary data
+data to join to the primary. For example, it is possible to join just secondary data
 without any available tertiary or supporting.
 
 If no viable fields are found in a file, it is reloaded with the next
 row set as the column header. This is repeated 5 times to check if a
 viable header line is present, after which the file is marked as
-non-standard. The datasets being tested do not exceeds several hundred
-lines in most instances, so this does not have a significant impact on
-reload times.
+non-standard. The original datasets being tested did not exceeds several hundred
+lines, so the impact this has on load times was not a significant consideration.
 
 ## 
 
 ## 4.2 - Other Data
 
-Data that is categorised in the other column experienced errors during
+Data that is categorised in the \'other\' column experienced errors during
 the import. This is generally a result of no viable mappings being
 present in the file but can also be caused by import errors such as file
-corruption. If the case of the latter, the file will be pasted to the
-other list box with its imported error mapped onto the end of the
-filename in the format "Filename.xlsx -- Error Description"
+corruption. In the case of the latter, the file will be pasted to the
+other list box with its import error mapped onto the end of the
+filename in the format \'Filename.xlsx -- Error Description\'.
 
 # <a name="data-join"></a>5.0 - Data Join Options
 
@@ -168,25 +145,24 @@ appear in the output box.
 ## 5.1 - Generating Primary Totals
 
 If the primary dataset is marked as having a large number of columns
-(\>100), this is generally because the data contains individual test
+(\>100), this is likely because the data contains individual test
 values, rather than any categorical sub-totals or total fields. In these
-instances, selecting "Primary Sub-Totals" will generate two new fields
+instances, selecting \'Primary Sub-Totals\' will generate two new fields
 from these values:
 
 -   \'Resp. Score AT \' -- A raw total of all test values
 
 -   \'Art. Score AT \' -- A total of all test values greater than 1
 
-This is generally a straightforward combination due to the source data
-being a system export without human input, so requires minimal if any
-correction other than checking for completeness.
+This is a straightforward combination due to the source data of this test area
+being a system export, so requires minimal if any correction other than checking for completeness.
 
 ## 5.2 - Generating Tertiary Totals
 
 Tertiary data recording methods are generally far more inconsistent
 across test areas, so will generate a large volume of columns when
 multiple tertiary datasets from different areas are loaded. Selecting
-"Tertiary Sub-Totals" will generate up to five new fields depending on
+\'Tertiary Sub-Totals\' will generate up to five new fields depending on
 the data present and dictionary mappings used:
 
 -   \'Merged M/O Notes\' -- Consolidates all main language (M-L) & other
@@ -203,32 +179,27 @@ the data present and dictionary mappings used:
     field and original sub-totals.
 
 -   \'O-L Test AT (tot.)\' -- Same as above, but searches for all other
-    language totals and combines them to generate a single other
-    language total field of all additional language scores.
+    language totals and combines them to generate a single consolidated other
+    language total field.
 
--   \'O-L Test AT (subs)\' -- Same as above but creates a single total
-    field from the subtotals of all other language columns.
+-   \'O-L Test AT (subs)\' -- Same as above but creates the consolidated other language total
+    field from subtotals of each individual language.
 
 -   \'Voc. Group AT (subs)' & \'Voc. Group AT (tot.)\' -- Generates a
-    binary 0/1 field from the \'O-L Test AT' fields to calculate if
+    binary 0/1 field from the \'O-L Test AT' fields to calculate if its corresponding
     other language total scores are above or belove accepted margins for
     language fluency.
 
 ## 5.3 - Dropping Sub-Totals
 
-There is also the option to drop all original fields that the new totals
-have been generated from. This is generally recommended for Primary data
-totalling, where subtotal columns can number in the hundreds, and their
-consolidation can greatly aid in data readability. This is generally
-also advised as this data is significantly less prone to inconsistent
-integer/string entries due to the nature of the data recording method
-used in the original test data.
+There is also the option to drop all original fields that the new customed fields
+have been generated from. For primary data, this removes the hundreds of subtotal columns in place of a single custom total.
 
-For Tertiary data it is recommended to review the auto-total fields
-against the original data manually due to the degree of inconsistency.
+For Tertiary data it is recommended to first perfom an export without this filter, so that the auto-total fields can be reviewed
+against the original data due to the degree of inconsistency.
 Whilst the purging of string characters generally allows for conversion
 of most data types to Integers/Floats, some value fields may contain
-entries like "100% Eng, 50% Fr, 10% Ger", which would generate
+entries like "100% Eng, 50% Fr, 10% Ger" rather than subtotals split along columns, which would generate
 abnormally large auto total amounts. Reference to the original field
 data and consolidated comment fields should be made before another
 extract is performed that drops the original fields.
@@ -251,7 +222,7 @@ Sub-Totals option, it is recommended that data first be output without
 this option selected to check for consistency across datasets. Reviewing
 the 'Timepoint (M)' fields may for example show that the primary data
 has its test month marked as 16, whilst a Secondary may have its data
-marked as 14.
+marked as 15.
 
 # <a name="join-notes"></a>6.0 - Join Notes
 
@@ -303,19 +274,17 @@ Codes, either due to human input error or multiple test timepoints.
 When exporting the data, it is possible to select either a new file path
 or export the consolidated excel file directly to the original import
 folder. The exported file is always saved as 'Site Data Joined.xlsx' and
-will overwrite any file with this name in the output folder.
+will overwrite any file with this name in the output folder, unless the file is open, which will cause an error flag.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image9.png)
 
-[]{#_Toc111398058 .anchor}
 
 ## 7.1 - Export Format
 
 The exported 'Site Data Joined.xlsx' file is designed to flag up
-instances of inconsistencies across datasets through the following:
+inconsistencies across datasets through the following:
 
-Column ordering by category, additional non-standard columns are moved
-to the end
+-   Column ordering by category, additional non-standard columns are moved to the end
 
 -   Instances of duplicate ID's are highlighted in dark red
 
@@ -325,10 +294,8 @@ to the end
     generated fields
 
 -   Colour scaling for primary, secondary, and tertiary data values
-    relative to expected amounts
+    relative to expected amounts. Non-numeric values are left wihout highlights
 
-This enables for easier isolation of anomalies in the data recording
-methodology across test areas and how to account for
-this.
+This enables for easier isolation of anomalies in the data recording methodology across test areas and how to account for this.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image10.png)

@@ -20,14 +20,9 @@
 
 # <a name="preface"></a>1.0 - Preface
 
-Much of the original content of both this guide and the tool itself have
-been anonymised due to GDPR rules regarding the original test data it
-was designed for. What follows is a stripped-down version of the
-original, eliminating entire sections involving personal info, and using
-test data that has been manually generated and entirely randomised. No
-Reference Codes, Area's, test values or comments present in the test
-data provided correlate to any of the original data this tool was
-intended for.
+Due to GDPR rules regarding the test data this program was designed for, much of its original content has been heavily adjusted or removed outright. What follows is a stripped-down concept version, eliminating large sections of the transformation and standardisation process relating to personal information. 
+
+The dummy data found here is representational of the original dataset formats, but has been entirely generated from scratch. All reference codes, test areas, values and comments are entirely randomised and have no basis in actual test data.
 
 # <a name="overview"></a>2.0 - Overview
 

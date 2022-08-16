@@ -36,25 +36,18 @@ This program was originally designed as an aid for the concatenation and joining
 
 -   Supporting Datasets - Contains miscellaneous data for things like post-testing commentary
 
-Datasets may not be cleanly split between these four categories, some
-.xlsx files may for example contain both their primary and tertiary data
-in one or be missing certain columns from either. The reason for this
-level of inconsistency is twofold:
+Datasets could contain a mixture of the types noted above. For example an extract could contain both the primary and tertiary data, or be missing certain columns from either. The reason for this level of inconsistency was twofold:
 
-1.  The source data comes from a multitude of test sites across various
-    countries, so data recording methods can vary significantly
+1.  The source data came from a multitude of test sites across various
+    countries, so data recording methods were not fully standardised.
 
-2.  Most data has been entered manually into .xlsx files, not extracted
-    from a source system. As such, many errors are a result of
+2.  A large portion of the data was entered manually into .xlsx files, not extracted
+    from a source system. As such, many transformation and standardisation errors would be a result of
     inconsistent input, e.g., mixing strings, integers, and floats.
 
-The output of this program is intended to flag up inconsistencies across
-both primary -- supporting data for individual sites, as well as between
-different sites recording methods. Given that some measurements may be
-recorded as multiple subtotal fields, single total fields, and string
-comments in single cells with value breakdowns, perfect joining is not
-feasible, but it is designed to partially align these fields for ease of
-manual alignment.
+Given the short timescale of the project and high degree of inconsistency between datasets, perfect joining of data was not considered to be viable. The combined output of this program was intended to provide an immediate visual flag of major inconsistencies across primary -- supporting data for individual sites, as well as between the different recording methods used across test areas, enabling more reliable manual corrections.
+
+
 
 ## 2.1 - Interpreter Settings
 

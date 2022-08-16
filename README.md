@@ -26,20 +26,15 @@ The dummy data found here is representational of the original dataset formats, b
 
 # <a name="overview"></a>2.0 - Overview
 
-This tool is intended as an aid for the concatenation and joining of
-multiple .xlsx datasets to quickly flag up instances of missing join
-ID's, inconsistent values between files, and common formatting errors.
-The data extracts this was intended for can be categorised into four
-main types, as follows:
+This program was originally designed as an aid for the concatenation and joining of multiple .xlsx test datasets to quickly flag up instances of missing join fields, inconsistent recording methods, and common formatting errors. The original datasets could broadly fit under four main categories:
 
--   Primary Datasets - First batch of test data
+-   Primary Datasets - First batch of test data, primarily numeric with basic participant details
 
--   Secondary Datasets - Second batch of test data
+-   Secondary Datasets - Second batch of test data, primarily numeric with basic participant details
 
--   Tertiary Datasets - Breakdowns of dialect data
+-   Tertiary Datasets - Breakdowns of dialect data, generally very inconsistent across datasets, containing the majority of the participant info with a mixture of integers and strings, sometimes in the same data column
 
--   Supporting Datasets - Contains miscellaneous data for things like
-    post-testing commentary
+-   Supporting Datasets - Contains miscellaneous data for things like post-testing commentary
 
 Datasets may not be cleanly split between these four categories, some
 .xlsx files may for example contain both their primary and tertiary data

@@ -87,7 +87,7 @@ The default dictionary is included within the tool itself. It would be periodica
 Mappings can also be imported using an .xlsx file with a list of columns
 and their corresponding mappings. It is also possible to import mappings
 from a .txt file, which uses standard python dictionary formatting.
-[Linked here](https://github.com/dwrlewis/Site-Converter/tree/master/Default%20Dictionaries) are examples of the default dictionary in both .xlsx and .txt
+[Found here](https://github.com/dwrlewis/Site-Converter/tree/master/Default%20Dictionaries) are examples of the default dictionary in both .xlsx and .txt
 formats.
 
 # <a name="data-import"></a>4.0 - Data Importing
@@ -296,6 +296,6 @@ inconsistencies across datasets through the following:
 -   Colour scaling for primary, secondary, and tertiary data values
     relative to expected amounts. Non-numeric values are left wihout highlights
 
-This enables for easier isolation of anomalies in the data recording methodology across test areas and how to account for this.
+This enables for easier isolation of anomalies in the data recording methodology across test areas and how to account for this. Included in the [dummy data folder](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data) is an example export of all the test data joined into a single consolidated file with no filters applied.
 
 ![alt text](https://github.com/dwrlewis/Site-Converter/blob/0ca3230f265415ba9d96eae3b9129f7832062c87/README%20Images/image10.png)

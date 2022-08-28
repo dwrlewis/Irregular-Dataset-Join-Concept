@@ -22,7 +22,9 @@
 
 Due to GDPR rules regarding the test data this program was designed for, much of its original content has been heavily adjusted or removed outright. What follows is a stripped-down concept version, eliminating large sections of the transformation and standardisation process relating to personal information. 
 
-The dummy data [found here](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data) is representational of the original dataset formats, but has been entirely generated from scratch. All reference codes, test areas, values and comments are entirely randomised and have no basis in actual test data.
+The dummy data [found here](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data) is representational of the original dataset irregularities, but has been entirely generated from scratch. All reference codes, test areas, values and comments are entirely randomised and have no basis in actual test data.
+
+This repository is currently intended as a broad proof of concept for dictionary based correction of highly irregular datasets.
 
 # <a name="overview"></a>2.0 - Overview
 
@@ -38,7 +40,7 @@ This program was originally designed as an aid for the concatenation and joining
 
 Datasets could contain a mixture of the types noted above. For example an extract could contain both the primary and tertiary data, or be missing certain columns from either. The reason for this level of inconsistency was twofold:
 
-1.  The source data came from a multitude of test sites across various
+1.  The source data came from a multitude of test areas across various
     countries, so data recording methods were not fully standardised.
 
 2.  A large portion of the data was entered manually into .xlsx files, not extracted
@@ -78,7 +80,7 @@ When a batch of data would be received, it would first need to have a mapping do
 
 ## 3.1 - Default Dictionary
 
-The default dictionary is included within the tool itself. It would be periodically updated with mappings as new site data was provided for testing, and was the generalised dictionary used for most conversion. In this version of the program, it has been populated with essential mappings for all of the randomised batch data [found here](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data).
+The default dictionary is included within the tool itself. It would be periodically updated with mappings as new area data was provided for testing, and was the generalised dictionary used for most conversion. In this version of the program, it has been populated with essential mappings for all of the randomised batch data [found here](https://github.com/dwrlewis/Site-Converter/tree/master/Dummy%20Data).
 
 ## 
 
@@ -187,8 +189,8 @@ the data present and dictionary mappings used:
 
 -   \'Voc. Group AT (subs)' & \'Voc. Group AT (tot.)\' -- Generates a
     binary 0/1 field from the \'O-L Test AT' fields to calculate if its corresponding
-    other language total scores are above or belove accepted margins for
-    language fluency.
+    other vocal total scores are above or belove accepted margins for
+    vocal fluency.
 
 ## 5.3 - Dropping Sub-Totals
 
@@ -285,7 +287,7 @@ inconsistencies across datasets through the following:
 
 -   Column ordering by category, additional non-standard columns are moved to the end
 
--   Instances of duplicate ID's are highlighted in dark red
+-   Instances of duplicate join ID's are highlighted in dark red
 
 -   All blank cells within the data are highlighted in light red
 
